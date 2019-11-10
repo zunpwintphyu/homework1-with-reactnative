@@ -11,25 +11,25 @@ export default class App extends React.Component {
         </View>
 
         <View style={styles.first}>
-          <View style={{backgroundColor:"#242132", width:140, height:120,borderRadius:7,}}>
+          <View style={styles.box}>
               <Text  style={styles.text}>HR</Text>
           </View>
-          <View style={{backgroundColor:"#242132", width:140, height:120,borderRadius:7,marginLeft:20,}}>
+          <View style={styles.box}>
               <Text  style={styles.text}>Finance</Text>
           </View>
         </View> 
 
-        <View style={styles.second}>
-          <View style={{backgroundColor:"#242132", width:140, height:120,borderRadius:7,}}>
+        <View style={styles.first}>
+          <View style={styles.box}>
               <Text  style={styles.text}>PM</Text>
           </View>
-          <View style={{backgroundColor:"#242132", width:140, height:120,marginLeft:20,borderRadius:7,}}>
+          <View style={styles.box}>
               <Text  style={styles.text}>UI/UX</Text>
           </View>
         </View>
 
-        <View style={styles.third}>
-          <View style={{backgroundColor:"#242132", width:140, height:120,borderRadius:7,}}>
+        <View style={styles.first}>
+          <View style={styles.box}>
               <Text  style={styles.text}>Teaching</Text>
           </View>
         </View>
@@ -41,38 +41,30 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     backgroundColor:"black",
-    marginTop:25,
+    flexDirection:'column',
+    paddingHorizontal:20,
     flex: 1,
   },
   image:{
-    marginTop:'20%',
-    marginLeft:'11%',
+    width:'100%',
+    marginTop:40,
+    marginLeft:20,
   },
   first:{ 
-    marginLeft:'10%',
-    marginTop:'20%',
-    marginBottom:'25%',
+    flex:1,
     flexDirection:'row',
-    alignItems:"center",
-    flex: .2,
-  },
-  second:{  
-    marginLeft:'10%',
-    marginBottom:'25%',
-    flexDirection:'row',
-    alignItems:"center",
-    flex: .2,
-  },
-  third:{
-    marginLeft:'10%',
-    marginBottom:'25%',
-    flexDirection:'row',  
-    alignItems:"center",
-    flex: .1,
+    justifyContent:"space-between",
+    marginVertical:10, 
   },
   text:{
     color:'white',
-    marginTop:'58%',
-    marginLeft:'15%',
+    marginTop:70,
+    marginLeft:10,
   },
+  box:{
+    backgroundColor:"#242132",
+    width:"45%",
+    height:130,
+    borderRadius:7,
+  }
 });
